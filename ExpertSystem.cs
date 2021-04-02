@@ -67,5 +67,15 @@ namespace WindowsFormsApp_Expert_System
         {
 
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAnswer_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
