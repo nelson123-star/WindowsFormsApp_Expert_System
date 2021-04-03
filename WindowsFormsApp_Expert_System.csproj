@@ -70,6 +70,7 @@
     </Compile>
     <Compile Include="ExpertSystemCore.cs" />
     <Compile Include="ExpertSystemData.cs" />
+    <Compile Include="ExpertSystemQuestion.cs" />
     <Compile Include="ExpertSystemWindowsForm.cs" />
     <Compile Include="ExpertSystem.cs">
       <SubType>Form</SubType>
