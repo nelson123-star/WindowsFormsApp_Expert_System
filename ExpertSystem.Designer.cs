@@ -37,14 +37,15 @@ namespace WindowsFormsApp_Expert_System
             this.утвержденияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.AddToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dataSet11 = new WindowsFormsApp_Expert_System.DataSet1();
-            this.radioButtonYes = new System.Windows.Forms.RadioButton();
-            this.radioButtonNo = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
             this.richTextBoxExpert = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.buttonAnswer = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.buttonAnswer = new System.Windows.Forms.Button();
             this.richTextBoxOutputExpert = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
@@ -76,21 +77,21 @@ namespace WindowsFormsApp_Expert_System
             // OpenToolStripMenuItem
             // 
             this.OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
-            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.OpenToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.OpenToolStripMenuItem.Text = "Открыть";
             this.OpenToolStripMenuItem.Click += new System.EventHandler(this.OpenToolStripMenuItem_Click);
             // 
             // SaveToolStripMenuItem
             // 
             this.SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
-            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SaveToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.SaveToolStripMenuItem.Text = "Сохранить";
             this.SaveToolStripMenuItem.Click += new System.EventHandler(this.SaveToolStripMenuItem_Click);
             // 
             // SaveAsToolStripMenuItem
             // 
             this.SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
-            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.SaveAsToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.SaveAsToolStripMenuItem.Text = "Сохранить как";
             this.SaveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsToolStripMenuItem_Click);
             // 
@@ -105,7 +106,7 @@ namespace WindowsFormsApp_Expert_System
             // AddToolStripMenuItem
             // 
             this.AddToolStripMenuItem.Name = "AddToolStripMenuItem";
-            this.AddToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.AddToolStripMenuItem.Size = new System.Drawing.Size(159, 26);
             this.AddToolStripMenuItem.Text = "Добавить";
             this.AddToolStripMenuItem.Click += new System.EventHandler(this.AddToolStripMenuItem_Click);
             // 
@@ -114,27 +115,29 @@ namespace WindowsFormsApp_Expert_System
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // radioButtonYes
+            // radioButton1
             // 
-            this.radioButtonYes.AutoSize = true;
-            this.radioButtonYes.Location = new System.Drawing.Point(6, 46);
-            this.radioButtonYes.Name = "radioButtonYes";
-            this.radioButtonYes.Size = new System.Drawing.Size(48, 21);
-            this.radioButtonYes.TabIndex = 1;
-            this.radioButtonYes.TabStop = true;
-            this.radioButtonYes.Text = "Да";
-            this.radioButtonYes.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 21);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(48, 21);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Да";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
-            // radioButtonNo
+            // radioButton2
             // 
-            this.radioButtonNo.AutoSize = true;
-            this.radioButtonNo.Location = new System.Drawing.Point(6, 73);
-            this.radioButtonNo.Name = "radioButtonNo";
-            this.radioButtonNo.Size = new System.Drawing.Size(54, 21);
-            this.radioButtonNo.TabIndex = 2;
-            this.radioButtonNo.TabStop = true;
-            this.radioButtonNo.Text = "Нет";
-            this.radioButtonNo.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 48);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(54, 21);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Нет";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // label1
             // 
@@ -151,22 +154,45 @@ namespace WindowsFormsApp_Expert_System
             // 
             this.richTextBoxExpert.Location = new System.Drawing.Point(62, 92);
             this.richTextBoxExpert.Name = "richTextBoxExpert";
-            this.richTextBoxExpert.Size = new System.Drawing.Size(319, 141);
+            this.richTextBoxExpert.Size = new System.Drawing.Size(381, 141);
             this.richTextBoxExpert.TabIndex = 5;
             this.richTextBoxExpert.Text = "";
             this.richTextBoxExpert.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.radioButton3);
             this.groupBox1.Controls.Add(this.buttonAnswer);
-            this.groupBox1.Controls.Add(this.radioButtonYes);
-            this.groupBox1.Controls.Add(this.radioButtonNo);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.Location = new System.Drawing.Point(62, 294);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 100);
+            this.groupBox1.Size = new System.Drawing.Size(680, 100);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ответ";
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(7, 73);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(110, 21);
+            this.radioButton3.TabIndex = 4;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton1";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            this.radioButton3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
+            // buttonAnswer
+            // 
+            this.buttonAnswer.Location = new System.Drawing.Point(576, 77);
+            this.buttonAnswer.Name = "buttonAnswer";
+            this.buttonAnswer.Size = new System.Drawing.Size(98, 23);
+            this.buttonAnswer.TabIndex = 3;
+            this.buttonAnswer.Text = "Ответить";
+            this.buttonAnswer.UseVisualStyleBackColor = true;
+            this.buttonAnswer.Click += new System.EventHandler(this.buttonAnswer_Click);
             // 
             // label2
             // 
@@ -189,20 +215,11 @@ namespace WindowsFormsApp_Expert_System
             this.label3.Text = "Вывод эксперта";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // buttonAnswer
-            // 
-            this.buttonAnswer.Location = new System.Drawing.Point(96, 73);
-            this.buttonAnswer.Name = "buttonAnswer";
-            this.buttonAnswer.Size = new System.Drawing.Size(98, 23);
-            this.buttonAnswer.TabIndex = 3;
-            this.buttonAnswer.Text = "Ответить";
-            this.buttonAnswer.UseVisualStyleBackColor = true;
-            this.buttonAnswer.Click += new System.EventHandler(this.buttonAnswer_Click);
-            // 
             // richTextBoxOutputExpert
             // 
             this.richTextBoxOutputExpert.Location = new System.Drawing.Point(460, 92);
             this.richTextBoxOutputExpert.Name = "richTextBoxOutputExpert";
+            this.richTextBoxOutputExpert.ReadOnly = true;
             this.richTextBoxOutputExpert.Size = new System.Drawing.Size(319, 141);
             this.richTextBoxOutputExpert.TabIndex = 10;
             this.richTextBoxOutputExpert.Text = "";
@@ -243,8 +260,8 @@ namespace WindowsFormsApp_Expert_System
         private System.Windows.Forms.ToolStripMenuItem утвержденияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem AddToolStripMenuItem;
         private DataSet1 dataSet11;
-        private System.Windows.Forms.RadioButton radioButtonYes;
-        private System.Windows.Forms.RadioButton radioButtonNo;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox richTextBoxExpert;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -252,6 +269,7 @@ namespace WindowsFormsApp_Expert_System
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonAnswer;
         private System.Windows.Forms.RichTextBox richTextBoxOutputExpert;
+        private System.Windows.Forms.RadioButton radioButton3;
     }
 }
 
