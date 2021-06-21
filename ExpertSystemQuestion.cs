@@ -10,7 +10,7 @@ namespace WindowsFormsApp_Expert_System
 {
     class ExpertSystemAnswer
     {
-        public int Wigth;
+        public int Wigth;  
         public string Text;
 
     }
@@ -19,7 +19,6 @@ namespace WindowsFormsApp_Expert_System
         public string QuestionText;
         public ExpertSystemAnswer AnswerOne;
         public ExpertSystemAnswer AnswerTwo;
-        public ExpertSystemAnswer AnswerThree;
 
         public int Answer;
 
@@ -27,7 +26,6 @@ namespace WindowsFormsApp_Expert_System
         {
             AnswerOne = new ExpertSystemAnswer();
             AnswerTwo = new ExpertSystemAnswer();
-            AnswerThree = new ExpertSystemAnswer();
         }
         public int CheckedAnswerWigth()
         {
@@ -36,9 +34,7 @@ namespace WindowsFormsApp_Expert_System
             switch(Answer)
             { 
                 case 1: AnswerWigth = AnswerOne.Wigth; break;
-                case 2: AnswerWigth = AnswerTwo.Wigth; break;
-                case 3: AnswerWigth = AnswerThree.Wigth; break;
-                
+                case 2: AnswerWigth = AnswerTwo.Wigth; break;                
             }
             return AnswerWigth;
         }
